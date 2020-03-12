@@ -9,8 +9,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author tian
- * @since 2020-03-08
+ * @since 2020-03-12
  */
 public interface AdminService extends IService<Admin> {
 
+    Admin login(String username, String password);
+
+    Admin getUserInfo(String userName);
 }

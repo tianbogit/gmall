@@ -1,0 +1,17 @@
+dataSources:
+  db_master: !!com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://192.168.20.130:3306/gmall_ums?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+  db_slave0: !!com.zaxxer.hikari.HikariDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://192.168.20.130:3316/gmall_ums?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+
+masterSlaveRule:
+  name: db_pms
+  masterDataSourceName: db_master
+  slaveDataSourceNames:
+    - db_slave0

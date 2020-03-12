@@ -1,7 +1,8 @@
 package com.tian.gmall.pms;
 
-import com.tian.gmall.pms.entity.ProductInfo;
-import com.tian.gmall.pms.service.ProductInfoService;
+
+import com.tian.gmall.pms.entity.Product;
+import com.tian.gmall.pms.service.ProductService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,14 +14,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class GmallPmsApplicationTests {
 
     @Autowired
-    ProductInfoService productInfoService;
+    ProductService productService;
 
 
     @Test
     public void contextLoads() {
 
-        ProductInfo productInfo = productInfoService.getById(24);
-        System.out.println(productInfo.getProductName());
+        Product productInfo = productService.getById(1);
+        System.out.println(productInfo.getName());
 
 
     }

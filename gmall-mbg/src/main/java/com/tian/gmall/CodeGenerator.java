@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 public class CodeGenerator {
     public static void main(String[] args) {
-        String moduleName = "ums";
+        String moduleName = "cms";
         AutoGenerator mpg = new AutoGenerator();
 
         GlobalConfig gc = new GlobalConfig();
